@@ -1,0 +1,21 @@
+{
+  "name": "connect4-arena",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Full-stack multiplayer Connect 4 with Next.js, Express, Socket.IO, and Supabase.",
+  "packageManager": "pnpm@11.1.2",
+  "scripts": {
+    "dev": "concurrently \"corepack pnpm --filter @connect4/server dev\" \"corepack pnpm --filter @connect4/web dev\"",
+    "build": "corepack pnpm -r --sort build",
+    "lint": "corepack pnpm -r --sort lint",
+    "typecheck": "corepack pnpm -r --sort typecheck"
+  },
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "devDependencies": {
+    "concurrently": "^9.1.0",
+    "typescript": "^5.6.3"
+  }
+}
